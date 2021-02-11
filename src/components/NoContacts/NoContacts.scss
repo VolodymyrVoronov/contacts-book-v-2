@@ -1,0 +1,52 @@
+@import "./../../styles/mixins.scss";
+
+.no-contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: var(--xl);
+
+  margin: 0 auto;
+  padding: 10px;
+
+  background-color: var(--no-contacts-bg-color);
+
+  border-radius: 5px;
+
+  &__title {
+    display: flex;
+
+    @include defaultFont;
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 500;
+    color: var(--white);
+  }
+
+  &__icon {
+    display: flex;
+
+    margin-top: 25px;
+    padding: 25px;
+
+    font-size: 150px;
+
+    background-color: var(--white);
+
+    border-radius: 50%;
+  }
+
+  &__text {
+    display: flex;
+
+    margin-top: 25px;
+
+    @include defaultFont;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
+    color: var(--white);
+  }
+}

@@ -1,0 +1,10 @@
+@import "./../../styles/mixins.scss";
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+
+  width: var(--xl);
+
+  margin: 0 auto;
+}

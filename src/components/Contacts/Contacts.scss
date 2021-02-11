@@ -1,0 +1,17 @@
+@import "./../../styles/mixins.scss";
+
+.contacts {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  width: var(--xl);
+
+  margin-top: 10px;
+  padding: 0 5px 10px 5px;
+
+  background-color: var(--contacts-bg-color);
+
+  border-radius: 5px;
+}

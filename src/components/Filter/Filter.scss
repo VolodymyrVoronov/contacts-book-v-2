@@ -1,0 +1,163 @@
+@import "./../../styles/mixins.scss";
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: var(--xl);
+
+  padding: 10px 5px;
+
+  background-color: var(--filter-bg-color);
+
+  border-radius: 5px;
+
+  &__more-filters-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 5px;
+    padding: 0;
+
+    @include defaultFont;
+    font-weight: 500;
+
+    color: var(--black);
+    background-color: var(--white);
+
+    border: 2px solid var(--white);
+    border-radius: 5px;
+    outline: none;
+
+    transition: 0.3s ease !important;
+
+    &:hover {
+      border: 2px solid var(--black);
+
+      cursor: pointer;
+
+      transition: 0.3s ease !important;
+    }
+  }
+
+  &__more-filters-btn-icon {
+    display: flex;
+
+    margin-left: 5px;
+
+    &--down {
+      animation: 2s arrowDown infinite;
+    }
+
+    &--up {
+      animation: 2s arrowUp infinite;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    width: 100%;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 230px;
+
+    margin: 10px 5px 0 5px;
+    padding: 5px 0;
+
+    @include defaultFont;
+    font-weight: 500;
+
+    color: var(--black);
+    background-color: var(--white);
+
+    border: 2px solid var(--white);
+    border-radius: 5px;
+    outline: none;
+
+    transition: 0.3s ease !important;
+
+    &:hover {
+      border: 2px solid var(--black);
+
+      cursor: pointer;
+
+      transition: 0.3s ease !important;
+    }
+
+    &--active {
+      border: 2px solid var(--black);
+
+      cursor: default;
+
+      &:hover {
+        cursor: default;
+      }
+    }
+  }
+
+  &__btn-icon {
+    display: flex;
+
+    margin-left: 5px;
+  }
+}
+
+@keyframes arrowDown {
+  0% {
+    transform: translateY(1px);
+  }
+
+  50% {
+    transform: translateY(-2px);
+  }
+
+  100% {
+    transform: translateY(1px);
+  }
+}
+
+@keyframes arrowUp {
+  0% {
+    transform: translateY(-1px);
+  }
+
+  50% {
+    transform: translateY(2px);
+  }
+
+  100% {
+    transform: translateY(-1px);
+  }
+}
+
+.enter {
+  opacity: 0;
+}
+
+.enter-active {
+  opacity: 1;
+  transition: opacity 2s;
+}
+
+.exit {
+  opacity: 1;
+}
+
+.exit-active {
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+.exit-done {
+  opacity: 0;
+}
