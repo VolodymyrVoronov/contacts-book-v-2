@@ -283,7 +283,7 @@ const [useStore] = create((set) => ({
       cityName: "Tokyo",
       country: "Japan",
       countryCode: "jp",
-      email: "kotov@mail.com",
+      email: "smith@mail.com",
       family: true,
       firstName: "Max",
       friends: true,
